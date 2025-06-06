@@ -61,6 +61,7 @@ Model performance is evaluated using:
 
 * **`datapreprocess.py`:** Python script for cleaning, transforming, and preparing the raw data.
 * **`modeltraining.py`:** Python script for building, training, and evaluating the deep learning model.
+* **`biasevaluation.py`:** Python script for evaluating and assessing the model's fairness across different demographic groups.
 * **`mentalhealth.py`:** Python script for the interactive web application.
 * **`model/` directory:**
     * `preprocessor.pkl`: The fitted scikit-learn preprocessor object.
@@ -105,7 +106,13 @@ Model performance is evaluated using:
     ```
     This script will train the deep learning model using the preprocessed data and save the trained model in the `model/` directory.
 
-4.  **Run Streamlit Application Locally:**
+4.  **Run Bias Evaluation:**
+    ```bash
+    python biasevaluation.py
+    ```
+    This script will assess the model's fairness across different demographic groups.
+
+5.  **Run Streamlit Application Locally:**
     ```bash
     streamlit run mentalhealth.py
     ```
